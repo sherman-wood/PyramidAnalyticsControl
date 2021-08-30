@@ -1,0 +1,9 @@
+C:\Users\pebert\Source\Repos\PyramidAnalyticsControl\PyramidAnalyticsLib\bin\Debug\netcoreapp3.1\PyramidAnalyticsLib.deps.json
+C:\Users\pebert\Source\Repos\PyramidAnalyticsControl\PyramidAnalyticsLib\bin\Debug\netcoreapp3.1\PyramidAnalyticsLib.dll
+C:\Users\pebert\Source\Repos\PyramidAnalyticsControl\PyramidAnalyticsLib\bin\Debug\netcoreapp3.1\PyramidAnalyticsLib.pdb
+C:\Users\pebert\Source\Repos\PyramidAnalyticsControl\PyramidAnalyticsLib\obj\Debug\netcoreapp3.1\PyramidAnalyticsLib.csproj.AssemblyReference.cache
+C:\Users\pebert\Source\Repos\PyramidAnalyticsControl\PyramidAnalyticsLib\obj\Debug\netcoreapp3.1\PyramidAnalyticsLib.AssemblyInfoInputs.cache
+C:\Users\pebert\Source\Repos\PyramidAnalyticsControl\PyramidAnalyticsLib\obj\Debug\netcoreapp3.1\PyramidAnalyticsLib.AssemblyInfo.cs
+C:\Users\pebert\Source\Repos\PyramidAnalyticsControl\PyramidAnalyticsLib\obj\Debug\netcoreapp3.1\PyramidAnalyticsLib.csproj.CoreCompileInputs.cache
+C:\Users\pebert\Source\Repos\PyramidAnalyticsControl\PyramidAnalyticsLib\obj\Debug\netcoreapp3.1\PyramidAnalyticsLib.dll
+C:\Users\pebert\Source\Repos\PyramidAnalyticsControl\PyramidAnalyticsLib\obj\Debug\netcoreapp3.1\PyramidAnalyticsLib.pdb

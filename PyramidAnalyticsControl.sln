@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PyramidAnalyticsLib", "PyramidAnalyticsLib\PyramidAnalyticsLib.csproj", "{C9E96B73-23B9-45B8-9FFC-5D6825E691AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PyramidAnalyticsUnitTest", "PyramidAnalyticsUnitTest\PyramidAnalyticsUnitTest.csproj", "{FA985422-4699-4008-BAE8-388C952CB8CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9E96B73-23B9-45B8-9FFC-5D6825E691AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9E96B73-23B9-45B8-9FFC-5D6825E691AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9E96B73-23B9-45B8-9FFC-5D6825E691AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9E96B73-23B9-45B8-9FFC-5D6825E691AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA985422-4699-4008-BAE8-388C952CB8CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA985422-4699-4008-BAE8-388C952CB8CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA985422-4699-4008-BAE8-388C952CB8CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA985422-4699-4008-BAE8-388C952CB8CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6C53C1E-FD61-4D98-A0D0-0095236C8556}
+	EndGlobalSection
+EndGlobal
