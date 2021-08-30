@@ -4,8 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
+  <!-- ItemGroup>
     <PackageReference Include="Microsoft.OData.Client" Version="7.9.0" />
-  </ItemGroup>
+  </ItemGroup -->
 
 </Project>

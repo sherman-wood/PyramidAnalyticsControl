@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\patrick.ebert\\source\\repos\\PyramidAnalyticsControl\\PyramidAnalyticsUnitTest\\PyramidAnalyticsUnitTest.csproj": {}
+    "C:\\Users\\sherman.wood\\Documents\\GitHub\\PyramidAnalyticsControl\\PyramidAnalyticsUnitTest\\PyramidAnalyticsUnitTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\patrick.ebert\\source\\repos\\PyramidAnalyticsControl\\PyramidAnalyticsLib\\PyramidAnalyticsLib.csproj": {
+    "C:\\Users\\sherman.wood\\Documents\\GitHub\\PyramidAnalyticsControl\\PyramidAnalyticsLib\\PyramidAnalyticsLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\patrick.ebert\\source\\repos\\PyramidAnalyticsControl\\PyramidAnalyticsLib\\PyramidAnalyticsLib.csproj",
+        "projectUniqueName": "C:\\Users\\sherman.wood\\Documents\\GitHub\\PyramidAnalyticsControl\\PyramidAnalyticsLib\\PyramidAnalyticsLib.csproj",
         "projectName": "PyramidAnalyticsLib",
-        "projectPath": "C:\\Users\\patrick.ebert\\source\\repos\\PyramidAnalyticsControl\\PyramidAnalyticsLib\\PyramidAnalyticsLib.csproj",
-        "packagesPath": "C:\\Users\\patrick.ebert\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\patrick.ebert\\source\\repos\\PyramidAnalyticsControl\\PyramidAnalyticsLib\\obj\\",
+        "projectPath": "C:\\Users\\sherman.wood\\Documents\\GitHub\\PyramidAnalyticsControl\\PyramidAnalyticsLib\\PyramidAnalyticsLib.csproj",
+        "packagesPath": "C:\\Users\\sherman.wood\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sherman.wood\\Documents\\GitHub\\PyramidAnalyticsControl\\PyramidAnalyticsLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\patrick.ebert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sherman.wood\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +26,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,13 +37,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
-          "dependencies": {
-            "Microsoft.OData.Client": {
-              "target": "Package",
-              "version": "[7.9.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -60,21 +52,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\patrick.ebert\\source\\repos\\PyramidAnalyticsControl\\PyramidAnalyticsUnitTest\\PyramidAnalyticsUnitTest.csproj": {
+    "C:\\Users\\sherman.wood\\Documents\\GitHub\\PyramidAnalyticsControl\\PyramidAnalyticsUnitTest\\PyramidAnalyticsUnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\patrick.ebert\\source\\repos\\PyramidAnalyticsControl\\PyramidAnalyticsUnitTest\\PyramidAnalyticsUnitTest.csproj",
+        "projectUniqueName": "C:\\Users\\sherman.wood\\Documents\\GitHub\\PyramidAnalyticsControl\\PyramidAnalyticsUnitTest\\PyramidAnalyticsUnitTest.csproj",
         "projectName": "PyramidAnalyticsUnitTest",
-        "projectPath": "C:\\Users\\patrick.ebert\\source\\repos\\PyramidAnalyticsControl\\PyramidAnalyticsUnitTest\\PyramidAnalyticsUnitTest.csproj",
-        "packagesPath": "C:\\Users\\patrick.ebert\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\patrick.ebert\\source\\repos\\PyramidAnalyticsControl\\PyramidAnalyticsUnitTest\\obj\\",
+        "projectPath": "C:\\Users\\sherman.wood\\Documents\\GitHub\\PyramidAnalyticsControl\\PyramidAnalyticsUnitTest\\PyramidAnalyticsUnitTest.csproj",
+        "packagesPath": "C:\\Users\\sherman.wood\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sherman.wood\\Documents\\GitHub\\PyramidAnalyticsControl\\PyramidAnalyticsUnitTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\patrick.ebert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sherman.wood\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,10 +78,9 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\patrick.ebert\\source\\repos\\PyramidAnalyticsControl\\PyramidAnalyticsLib\\PyramidAnalyticsLib.csproj": {
-                "projectPath": "C:\\Users\\patrick.ebert\\source\\repos\\PyramidAnalyticsControl\\PyramidAnalyticsLib\\PyramidAnalyticsLib.csproj"
+              "C:\\Users\\sherman.wood\\Documents\\GitHub\\PyramidAnalyticsControl\\PyramidAnalyticsLib\\PyramidAnalyticsLib.csproj": {
+                "projectPath": "C:\\Users\\sherman.wood\\Documents\\GitHub\\PyramidAnalyticsControl\\PyramidAnalyticsLib\\PyramidAnalyticsLib.csproj"
               }
             }
           }
@@ -102,7 +93,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -118,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -8,34 +8,57 @@ namespace PyramidAnalyticsUnitTest
 {
     class Program
     {
+        private static Credentials credentials;
         static void Main(string[] args)
         {
-            Credentials c = loadCredentials("C:\\creds.json");
-            PyramidAnayticsServer p = new PyramidAnayticsServer(c.Url, c.User, c.Password, true);
-            System.Console.WriteLine(p.getMe().ToString());            
+            credentials = loadCredentials(args[0]);
+            System.Console.WriteLine("Accessing Pyramid at: " + credentials.Url);
+            System.Console.WriteLine("Logged in as user: " + credentials.User);
+            PyramidAnayticsServer p = new PyramidAnayticsServer(credentials.Url, credentials.User, credentials.Password, true);
+            System.Console.WriteLine(p.getMe().ToString());
+            testByTokenAndEmbed(p);
         }
 
         private static Credentials loadCredentials(string path)
         {
-            StreamReader sr = new StreamReader(path);
-            string line;
-            while((line = sr.ReadLine())!=null)
+            // StreamReader sr = new StreamReader(path);
+            // string line;
+            // while((line = sr.ReadLine())!=null)
+            // {
+            try
             {
-                try
-                {
-                    Credentials c = JsonSerializer.Deserialize<Credentials>(line);
-                    if (c != null)
-                        return c;
-                }
-                catch (Exception ex) { System.Console.WriteLine("Cannot parse credentials json."); }
+                string jsonString = File.ReadAllText(path);
+                Credentials c = JsonSerializer.Deserialize<Credentials>(jsonString);
+                if (c != null)
+                    return c;
             }
+            catch (Exception ex) {
+                System.Console.WriteLine("Cannot parse credentials json.");
+                System.Console.WriteLine(ex);
+            }
+            // }
             return null;
         }
 
-        private static void testAPILib(string url, string username, string password)
+        private static void testByTokenAndEmbed(PyramidAnayticsServer p)
         {
-            Console.WriteLine("PyramidAnalytics Control!");
-            PyramidAnayticsServer p = new PyramidAnayticsServer(url, username, password, true);
+            string loginAsUser = "viewer";
+            string embedDomain = "localhost";
+            Console.WriteLine("PyramidAnalytics testByTokenAndEmbed!");
+            // PyramidAnayticsServer p = new PyramidAnayticsServer(url, username, password, true);
+            System.Console.WriteLine("----");
+            System.Console.WriteLine("authenticateEmbed as: " + credentials.User);
+            System.Console.WriteLine(p.authenticateEmbed(embedDomain));
+            System.Console.WriteLine("authenticateByToken as: " + loginAsUser);
+            System.Console.WriteLine(p.authenticateUserByToken(loginAsUser));
+            System.Console.WriteLine("authenticateEmbedByToken as: " + loginAsUser);
+            System.Console.WriteLine(p.authenticateUserEmbedByToken(loginAsUser, embedDomain));
+        }
+
+        private static void testTenantAndRoles(PyramidAnayticsServer p)
+        {
+            Console.WriteLine("PyramidAnalytics testTenantAndRoles!");
+            // PyramidAnayticsServer p = new PyramidAnayticsServer(url, username, password, true);
             System.Console.WriteLine("----");
             
             Tenant t = p.createTenant("AAAPI_Test_Tenant", 1, 1);
@@ -96,7 +119,7 @@ namespace PyramidAnalyticsUnitTest
             System.Console.WriteLine(p.updateTenantSeats("AAAPI_Test_Tenant", 25, 25));
             p.deleteTenant(t, true, true);
 
-            p = new PyramidAnayticsServer(url, username, password, true);
+            // p = new PyramidAnayticsServer(url, username, password, true);
             List<Role> roles = p.getAllRoles();
             foreach (Role r in roles)
                 System.Console.WriteLine(r.name + "\r\n" + r.ToString());

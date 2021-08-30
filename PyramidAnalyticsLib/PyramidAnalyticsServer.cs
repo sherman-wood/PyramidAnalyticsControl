@@ -45,8 +45,10 @@ namespace PyramidAnalytics
             this.url = url;
             this.UserName = user;
             this.Password = password;
-            if (autoAuth)
+            if (autoAuth) {
                 this.token = authenticate();
+                System.Console.WriteLine("auth token: " + this.token);
+            }
         }
         #endregion CONSTRUCTORS
 
@@ -63,7 +65,7 @@ namespace PyramidAnalytics
         public string Token { get { return this.token; } }
         #endregion PROPERTIES
 
-        #region METHODES
+        #region METHODS
         /// <summary>
         /// takes no arguments. Utilizes the internal attributes url,user and password to try to connect.
         /// It will return the auth token on success. It will return null on failure
@@ -75,7 +77,44 @@ namespace PyramidAnalytics
                 return null;
 
             string data = "{'data':{'userName':'" + this.UserName + "','password':'" + this.Password + "'}}";
-            return callAPI(APIEndpoint.authEndpoint, data);
+            return callAPI(APIEndpoint.authUser, data);
+        }
+
+        /// <summary>
+        /// Login for embedding, returning token. Must pass domain of access.
+        /// </summary>
+        /// <returns>Returns a secure embedded authentication token</returns>
+        public string authenticateEmbed(string domain)
+        {
+            if ((this.url == null)||(this.UserName == null)||(this.Password == null))
+                return null;
+            string data = "{'data':{" +
+                "'userName':'" + this.UserName + "'," +
+                "'password':'" + this.Password + "'," +
+                "'domain':'" + domain + "'" +
+                "}}";
+            return callAPI(APIEndpoint.authUserEmbed, data);
+        }
+
+        /// <summary>
+        /// Login as another user, returning token
+        /// </summary>
+        /// <returns>Returns a secure authentication token</returns>
+        public string authenticateUserByToken( string userName )
+        {
+            string data = "{'data':{'userIdentity':'" + userName + "','token':'" + this.token + "'}}";
+            return callAPI(APIEndpoint.authUserByToken, data);
+        }
+
+        /// <summary>
+        /// Login as another user, returning token for embedding. Must pass domain of access.
+        /// </summary>
+        /// <returns>Returns a secure embedded authentication token</returns>
+        public string authenticateUserEmbedByToken( string userName, string domain )
+        {
+            string embedToken = authenticateEmbed(domain);
+            string data = "{'data':{'userIdentity':'" + userName + "','token':'" + embedToken + "'}}";
+            return callAPI(APIEndpoint.authUserEmbedByToken, data);
         }
 
         /// <summary>
@@ -474,9 +513,11 @@ namespace PyramidAnalytics
                 Task<String> res = result.Content.ReadAsStringAsync();
                 res.Wait();
                 return res.Result;
+            } else {
+                throw new Exception("callAPI - status fail: " + result.StatusCode);
             }
-            return null;
+            // return null;
         }
-        #endregion METHODES
+        #endregion METHODS
     }
 }
