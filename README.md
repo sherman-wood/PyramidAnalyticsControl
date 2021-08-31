@@ -1,4 +1,4 @@
-# PyramidAnalyticsControl: a C# client for [Pyramid Analytics REST API]
+# PyramidAnalyticsControl: a C# client for the Pyramid Analytics REST API
  
 [Pyramid Analytics REST API documentation](https://help.pyramidanalytics.com/Content/Root/developer/reference/APIs/REST%20API/REST%20APIs.htm?tocpath=Tech%20Reference%7CAPIs%7CREST%20API%27s%7C_____0)
 
