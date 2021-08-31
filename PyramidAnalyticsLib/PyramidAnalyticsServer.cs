@@ -47,7 +47,7 @@ namespace PyramidAnalytics
             this.Password = password;
             if (autoAuth) {
                 this.token = authenticate();
-                System.Console.WriteLine("auth token: " + this.token);
+                // System.Console.WriteLine("auth token: " + this.token);
             }
         }
         #endregion CONSTRUCTORS
